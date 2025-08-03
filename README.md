@@ -64,5 +64,3 @@ This dashboard was built using the **Online Retail** dataset, a popular public d
 - 🔎 Drill-through pages to explore granular transaction details
 
 ---
-
-test
