@@ -1,68 +1,80 @@
-![📊 Online Retail Dashboard](dashboard.png)
+# 📊 Online Retail Sales Performance Dashboard
 
-# 🛒 **Online Retail Sales Performance Dashboard**
+This project showcases my skills in data analysis, business intelligence, and data visualization using **Power BI**. The objective was to transform raw retail transaction data into an insightful dashboard to analyze sales performance and customer behavior.
 
-This project showcases my skills in **data analysis**, **business intelligence**, and **data visualization** using **Power BI**. The goal was to transform and analyze a dataset of online retail transactions to create a dynamic dashboard that reveals deep insights into sales performance.
-
----
-
-## 🔍 **Project Overview**
-
-This dashboard was built using the **Online Retail** dataset, a popular public dataset from the UCI Machine Learning Repository covering UK-based online retail transactions. Key project steps included:
-
-- 📥 **Data Acquisition:** Sourcing raw transactional data from CSV files.
-- 🧹 **Data Transformation:** Cleaning and shaping data with Power Query Editor.
-- 🗂️ **Data Modeling:** Creating a logical, efficient data model in Power BI.
-- 🧮 **DAX Calculations:** Writing custom measures to compute key performance indicators (KPIs).
-- 📈 **Data Visualization:** Designing an interactive dashboard to communicate insights effectively.
-
-**🔗 Dataset:** [Online Retail Dataset](https://archive.ics.uci.edu/dataset/352/online+retail)
+![Dashboard](dashboard.png)
 
 ---
 
-## 🎯 **Dashboard Highlights**
+## 🗂️ Project Overview
 
-- 👥 **Total Customers:** Unique customer count.
-- 🧾 **Total Sales:** Number of distinct transactions.
-- 💰 **Total Amount of Sales:** Gross revenue generated.
-- ↩️ **Returns:** Total value of returned items.
-- 📊 **Net Revenue:** Sales minus returns.
-- 🌍 **Geographic Analysis:** Map highlighting top 5 performing countries.
-- 📅 **Sales Trend:** Line chart showing sales over time with forecasting.
-- 🕒 **Sales by Year:** Doughnut chart representing sales distribution by year.
+Built using a publicly available dataset, this dashboard includes end-to-end business intelligence steps:
 
----
+- 📥 **Data Acquisition:** Loaded raw sales data from CSV.
+- 🧹 **Data Transformation:** Cleaned and shaped data in **Power Query Editor**.
+- 🧠 **Data Modeling:** Created relationships and structured the model in Power BI.
+- 🧾 **DAX Calculations:** Developed custom measures for KPIs.
+- 📈 **Visualization:** Designed a responsive and dynamic dashboard.
 
-## 🛠️ **Technical Skills Demonstrated**
-
-- 🧹 **Data Cleaning & Transformation:**
-
-  - Adjusted data types (dates, numbers)
-  - Handled missing and null values
-  - Created custom calculated columns like **Total Amount** (`Quantity` × `UnitPrice`)
-
-- 📊 **DAX (Data Analysis Expressions):**
-
-  - `DISTINCTCOUNT` for unique customers and sales
-  - `SUM` for total sales amount
-  - `CALCULATE` + `FILTER` for summing returns (negative sales)
-
-- 🎨 **Data Visualization & Storytelling:**
-
-  - Chose appropriate visuals: KPI cards, maps, line charts, and doughnut charts
-  - Built interactive reports with slicers and filters
-
-- 💼 **Business Acumen:**
-  - Developed meaningful KPIs to assess business performance and opportunities
+**Dataset Source:**  
+[Online Retail Dataset – UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail)
 
 ---
 
-## 🚀 **Future Enhancements**
+## 📌 Dashboard Insights
 
-- 🕰️ Adding a time dimension table for advanced date-based analysis
-- 👥 Customer segmentation to identify high-value segments
-- 🔎 Drill-through pages to explore granular transaction details
+The final dashboard includes key metrics and visuals:
+
+- 🧍‍♂️ **Total Customers:** Unique customers served.
+- 🧾 **Total Sales:** Number of transactions (Invoice count).
+- 💰 **Total Amount of Sales:** Total revenue generated.
+- 🔁 **Returns:** Value of returned products (based on negative quantities).
+- 🧮 **Net Revenue:** Sales revenue minus returns.
+- 🌍 **Top Countries:** Geographic map of top-performing countries.
+- 📊 **Sales Trend:** Line chart with quarterly breakdown and forecasting.
+- 📆 **Year-wise Sales Distribution:** Donut chart breakdown by year.
 
 ---
 
-tetete
+## 🛠️ Technical Highlights
+
+- 🧼 **Data Cleaning in Power Query:**
+
+  - Removed nulls and non-numeric entries.
+  - Converted data types (e.g., Quantity, UnitPrice, Dates).
+  - Added new calculated columns like `Total Amount = Quantity * UnitPrice`.
+
+- 🧮 **DAX Measures Created:**
+
+  - `Total Customers = DISTINCTCOUNT(CustomerID)`
+  - `Total Sales = DISTINCTCOUNT(InvoiceNo)`
+  - `Total Amount of Sales = SUM(Total Amount)`
+  - `Returns = CALCULATE(SUM(Total Amount), FILTER(...))`
+  - `Net Revenue = [Sales] - [Returns]`
+
+- 📈 **Forecasting:**
+  - Enabled in the line chart for future sales trend estimation.
+
+---
+
+## 🚀 Skills Demonstrated
+
+- Power BI Development
+- Power Query Editor
+- DAX (Data Analysis Expressions)
+- Business Intelligence Strategy
+- Data Visualization and Storytelling
+- KPI and Metric Design
+- Forecasting in Visuals
+- Real-World Retail Use Case Analysis
+
+---
+
+## 🔮 Future Improvements
+
+- Add date dimension table for advanced time intelligence.
+- Perform RFM analysis to identify high-value customers.
+- Include drill-through reports for invoice-level analysis.
+- Add return rate percentage and regional profitability breakdowns.
+
+---
